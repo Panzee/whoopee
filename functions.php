@@ -118,8 +118,8 @@ class _baseFunctions {
 	 */
 	public function wp_enqueue_scripts() {
 		wp_enqueue_script(
-			'test.js',
-			get_template_directory_uri() . '/js/test.js',
+			'menu.js',
+			get_template_directory_uri() . '/js/menu.js',
 			array( 'jquery' ),
 			'1.0.0',
 			true
@@ -130,6 +130,18 @@ class _baseFunctions {
 			'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css',
 			array(),
 			'4.6.1'
+		);
+		wp_enqueue_style(
+			'sass-basis',
+			get_template_directory_uri() . '/basis/basis.min.css',
+			array(),
+			'4.2.7'
+		);
+		wp_enqueue_style(
+			get_template(),
+			get_template_directory_uri() . '/style.css',
+			array( 'sass-basis' ),
+			'1.0.0'
 		);
 	}
 	
