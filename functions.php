@@ -143,6 +143,8 @@ class _baseFunctions {
 			array( 'sass-basis' ),
 			'1.0.0'
 		);
+		//wp_deregister_style( 'open-sans-css' );
+		//wp_register_style( 'open-sans', false );
 	}
 	
 	/**
