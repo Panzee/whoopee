@@ -1,0 +1,112 @@
+// コメントのタイトル
+#comments {
+	margin-top: 0;
+	margin-bottom: 1.6rem;
+	font-size: 2.4rem;
+}
+
+// コメントの一覧
+.commentlist {
+	list-style: none;
+	padding-left: 0;
+	
+	.comment {
+		background-color: #fff;
+		padding: .8rem;
+		margin-bottom: 1.6rem;
+		border: 1px solid #cccccc;
+	}	
+	.comment-metadata {
+		font-size: 1.4rem;
+		margin-bottom: .4rem;
+		
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+	}
+	.reply {
+		text-align: right;
+		padding-right: .8rem;
+		margin-bottom: .8rem;
+	}
+	.children {
+		list-style: none;
+		padding: 0;
+		margin-left: .8rem;
+	}
+}
+
+// コメントの送信フォーム
+.comment-respond {
+	background-color: #fff;
+	padding: .8rem;
+	margin-bottom: 1.6rem;
+	border: .1rem solid #cccccc;
+	
+	.comment-reply-title {
+		font-size: 2.4rem;
+		margin-top: 0;
+		margin-bottom: 1.6rem;
+	}
+	
+	.comment-form {
+
+		.comment-form-comment {
+			label {
+				display: block;
+				margin-bottom: .4rem;
+			}
+		}
+		
+		.comment-form-author {
+			@include bs-c-row();
+			
+			label {
+				@include bs-c-row__col(1, 3);
+				padding: .8rem 0;
+			}
+			input[type=text] {
+				@include bs-c-row__col(2, 3);
+				width: 100%;
+			}
+		}
+		.comment-form-email {
+			@include bs-c-row();
+			
+			label {
+				@include bs-c-row__col(1, 3);
+				padding: .8rem 0;
+			}
+			input[type=email] {
+				@include bs-c-row__col(2, 3);
+				width: 100%;
+				align-items: center;
+			}
+		}
+		.comment-form-url {
+			@include bs-c-row();
+			
+			label {
+				@include bs-c-row__col(1, 3);
+				padding: .8rem 0;
+			}
+			input[type=url] {
+				@include bs-c-row__col(2, 3);
+				width: 100%;
+			}
+		}
+		.form-submit {
+			margin-bottom: 0;
+		}
+		
+		input[type=text], input[type=email], input[type=url], input[type=submit] {
+			@include bs-c-form-control();
+		}
+		textarea {
+			@include bs-c-form-control();
+			width: 100%;
+			height: auto;
+		}
+	}
+}

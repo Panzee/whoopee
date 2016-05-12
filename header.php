@@ -11,8 +11,8 @@
 <body <?php body_class(); ?>>
 <header id="header">
 	<div class="_c-container">
-		<div class="_c-row _c-row--lg-margin _c-row--auto">
-			<div class="_c-row__col">
+		<div class="_c-row _c-row--auto _c-row--lg-margin">
+			<div class="_c-row__col">	
 				<div class="p-site-brand">
 					<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
 		    		<h1 class="p-site-brand__logo"><a class="p-site-brand__link" href="<?php echo home_url( '/' ); ?>"><?php the_custom_logo(); ?></a></h1>
@@ -21,7 +21,7 @@
 					<?php endif; ?>
 					<p class="p-site-brand__description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- p-site-brand -->
-			</div><!-- _c-row__col -->
+			</div><!-- c-row__col -->
 			<div class="_c-row__col _u-hidden-sm _u-hidden-md">
 				<div class="p-global-nav _u-pull-right">
 					<?php wp_nav_menu( array(
@@ -29,13 +29,11 @@
 						'container'				=> false,
 					) ); ?>
 				</div><!-- p-global-nav -->
-			</div><!-- _c-row__col -->
-			<div class="_c-row__col _u-hidden-lg" style="text-align: right;"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;MENU<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></div>
-		</div><!-- _c-row -->
-		<div class="_c-row">
-			<div class="_c-row__col">
-				<img class="header-image" src="<?php header_image(); ?>">
-			</div><!-- _c-row__col -->
-		</div><!-- _c-row -->
-	</div><!-- _c-container -->
+			</div><!-- c-row__col -->
+			<div class="_c-row__col _u-hidden-lg">
+				<div class="_u-pull-right"><i class="fa fa-bars fa-2x"></i></div>
+			</div><!-- c-row__col -->
+		</div><!-- c-row -->
+		<img class="header-image" src="<?php header_image(); ?>">
+	</div><!-- c-container -->
 </header>

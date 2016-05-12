@@ -1,0 +1,40 @@
+.c-archive-entry__body {
+	padding: .8rem;
+
+	.c-archive-entry__title {
+		margin-top: 0;
+		font-size: 2.4rem;
+		
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+		
+	}
+	
+	.c-archive-entry__excerpt {
+		
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+	}
+	
+	.c-archive-entry__meta {
+		overflow: hidden;
+		font-size: 1.2rem;
+		
+		.c-archive-entry__datetime {
+			float: left;
+			margin-right: 1.6rem;
+		}
+		.c-archive-entry__tags {
+			float: left;
+			
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+		}
+	}	
+}

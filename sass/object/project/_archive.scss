@@ -1,47 +1,29 @@
 .p-archive {
-	margin-bottom: 3.2rem;
-	padding-bottom: 2.4rem;
-	border-bottom: .1rem solid #000;
 
-	.p-archive__body {
-		padding-top: .8rem;
-	
-		.p-archive__title {
-			margin-top: 0;
-			font-size: 2.4rem;
-			
-			a {
-				text-decoration: none;
-				color: #000;
-			}
-			
-		}
-		
-		.p-archive__excerpt {
-			
-			a {
-				text-decoration: none;
-				color: #000;
-			}
-		}
-		
-		.p-archive__meta {
-			overflow: hidden;
-			font-size: 1.2rem;
-			
-			.p-archive__datetime {
-				float: left;
-				margin-right: 1.6rem;
-			}
-			.p-archive__tags {
-				float: left;
-				
-				a {
-					text-decoration: none;
-					color: #000;
-				}
-			}
-		}
-		
+	.p-archive__title {
+		font-size: 2.8rem;
+		margin-bottom: 1.6rem;
+		color: #333;
 	}
+	
+	.p-archive__description {
+		border: .1rem solid #cccccc;
+		background-color: #fff;
+		padding: .8rem;
+		margin-bottom: 3.2rem;
+		
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.p-archive__entry {
+		margin-bottom: 3.2rem;
+		padding-bottom: 2.4rem;
+		border: .1rem solid #cccccc;
+		background-color: #fff;
+	}
+	
 }

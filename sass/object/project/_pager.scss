@@ -1,27 +1,35 @@
-$bs-use-mixin-only: true;
-@import '../../sass-basis/src/scss/basis';
-
 .p-pager {
-	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
 	
 	.p-pager__previous {
-		float: left;
-		margin-right: 3.6rem;
+		
+		a {
+			@include bs-c-btn();
+		}
 	}
 	
 	.p-pager__paginate {
-		float: left;
-		overflow: hidden;
 		
 		.page-numbers {
-			display: block;
-			float: left;
-			margin-right: 2.4rem;
-			text-align: center;
+			@include bs-c-btn();
+			
+			&.current {
+				cursor: default;
+				background-color: blue;
+				color: #fff;
+				font-weight: bold;
+			}		
+			&.dots {
+				cursor: default;
+			}
 		}
 	}
 	
 	.p-pager__next {
-		float: right;
+		
+		a {
+			@include bs-c-btn();
+		}
 	}
 }

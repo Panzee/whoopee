@@ -60,34 +60,34 @@ class _baseFunctions {
 	public function register_sidebar() {
 		register_sidebar( array(
 			'id'						=> 'sidebar',
-			'before_widget'	=> '<aside id="%1$s">',
-			'after_widget'	=> '</aside>',
-			'before_title'	=> '<h3>',
+			'before_widget'	=> '<section class="p-widget %1$s">',
+			'after_widget'	=> '</section>',
+			'before_title'	=> '<h3 class="p-widget__title">',
 			'after_title'		=> '</h3>',
 		) );
 		
 		register_sidebar( array(
 			'id'						=> 'footer-1',
 			'name'          => 'フッター 1',
-			'before_widget'	=> '<div id="%1$s">',
-			'after_widget'	=> '</div>',
-			'before_title'	=> '<h3>',
+			'before_widget'	=> '<section id="p-widget %1$s">',
+			'after_widget'	=> '</section>',
+			'before_title'	=> '<h3 class="p-widget__title">',
 			'after_title'		=> '</h3>',
 		) );
 		register_sidebar( array(
 			'id'						=> 'footer-2',
 			'name'          => 'フッター 2',
-			'before_widget'	=> '<div id="%1$s">',
+			'before_widget'	=> '<div id="p-widget %1$s">',
 			'after_widget'	=> '</div>',
-			'before_title'	=> '<h3>',
+			'before_title'	=> '<h3 class="p-widget__title">',
 			'after_title'		=> '</h3>',
 		) );
 		register_sidebar( array(
 			'id'						=> 'footer-3',
 			'name'          => 'フッター 3',
-			'before_widget'	=> '<div id="%1$s">',
+			'before_widget'	=> '<div id="p-widget %1$s">',
 			'after_widget'	=> '</div>',
-			'before_title'	=> '<h3>',
+			'before_title'	=> '<h3 class="p-widget__title">',
 			'after_title'		=> '</h3>',
 		) );
 	}
@@ -133,16 +133,16 @@ class _baseFunctions {
 			array(),
 			'4.6.1'
 		);
-// 		wp_enqueue_style(
-// 			'sass-basis',
-// 			get_template_directory_uri() . '/basis/basis.min.css',
-// 			array(),
-// 			'4.2.7'
-// 		);
+		wp_enqueue_style(
+			'sass-basis',
+			get_template_directory_uri() . '/basis/basis.min.css',
+			array(),
+			'4.2.7'
+		);
 		wp_enqueue_style(
 			get_template(),
 			get_template_directory_uri() . '/sass/style.css',
-			array( /*'sass-basis'*/ ),
+			array( 'sass-basis' ),
 			'1.0.0'
 		);
 		//wp_deregister_style( 'open-sans-css' );
