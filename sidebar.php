@@ -1,3 +1,3 @@
-<aside class="" style="background-color: #bbb;">
+<aside id="sidebar" ">
 	<?php dynamic_sidebar( 'sidebar' ); ?>
-</aside><!-- _c-row__col -->
+</aside><!-- sidebar -->

@@ -1,0 +1,27 @@
+$bs-use-mixin-only: true;
+@import '../../sass-basis/src/scss/basis';
+
+.p-pager {
+	overflow: hidden;
+	
+	.p-pager__previous {
+		float: left;
+		margin-right: 3.6rem;
+	}
+	
+	.p-pager__paginate {
+		float: left;
+		overflow: hidden;
+		
+		.page-numbers {
+			display: block;
+			float: left;
+			margin-right: 2.4rem;
+			text-align: center;
+		}
+	}
+	
+	.p-pager__next {
+		float: right;
+	}
+}

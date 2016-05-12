@@ -1,9 +1,0 @@
-$bs-use-mixin-only: true;
-@import 'sass-basis/src/scss/basis';
-
-.staffs {
-    @include bs-c-row();
-    .staff {
-        @include bs-c-row__col(1, 3);
-    }
-}

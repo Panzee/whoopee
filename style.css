@@ -3,15 +3,3 @@ Theme Name: Whoopee
 */
 
 @charset "UTF-8";
-
-.staffs {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.staffs .staff {
-  flex: 1;
-  max-width: 100%;
-  flex: 0 1 33.33333%;
-  max-width: 33.33333%;
-}

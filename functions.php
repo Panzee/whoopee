@@ -21,8 +21,10 @@ class _baseFunctions {
 	public function __construct() {
 
 		add_theme_support( 'custom-header', array(
-			'width'		=> 1040,
-			'height'	=> 300,
+			'width'				=> 1152,
+			'height'			=> 300,
+			'flex-width' => false,
+			'flex-height' => true,	
 		) );
 		add_theme_support( 'custom-background' );
 		add_theme_support( 'post-thumbnails' );
@@ -67,24 +69,24 @@ class _baseFunctions {
 		register_sidebar( array(
 			'id'						=> 'footer-1',
 			'name'          => 'フッター 1',
-			'before_widget'	=> '<section id="%1$s">',
-			'after_widget'	=> '</section>',
+			'before_widget'	=> '<div id="%1$s">',
+			'after_widget'	=> '</div>',
 			'before_title'	=> '<h3>',
 			'after_title'		=> '</h3>',
 		) );
 		register_sidebar( array(
 			'id'						=> 'footer-2',
 			'name'          => 'フッター 2',
-			'before_widget'	=> '<section id="%1$s">',
-			'after_widget'	=> '</section>',
+			'before_widget'	=> '<div id="%1$s">',
+			'after_widget'	=> '</div>',
 			'before_title'	=> '<h3>',
 			'after_title'		=> '</h3>',
 		) );
 		register_sidebar( array(
 			'id'						=> 'footer-3',
 			'name'          => 'フッター 3',
-			'before_widget'	=> '<section id="%1$s">',
-			'after_widget'	=> '</section>',
+			'before_widget'	=> '<div id="%1$s">',
+			'after_widget'	=> '</div>',
 			'before_title'	=> '<h3>',
 			'after_title'		=> '</h3>',
 		) );
@@ -131,62 +133,19 @@ class _baseFunctions {
 			array(),
 			'4.6.1'
 		);
-		wp_enqueue_style(
-			'sass-basis',
-			get_template_directory_uri() . '/basis/basis.min.css',
-			array(),
-			'4.2.7'
-		);
+// 		wp_enqueue_style(
+// 			'sass-basis',
+// 			get_template_directory_uri() . '/basis/basis.min.css',
+// 			array(),
+// 			'4.2.7'
+// 		);
 		wp_enqueue_style(
 			get_template(),
-			get_template_directory_uri() . '/style.css',
-			array( 'sass-basis' ),
+			get_template_directory_uri() . '/sass/style.css',
+			array( /*'sass-basis'*/ ),
 			'1.0.0'
 		);
 		//wp_deregister_style( 'open-sans-css' );
 		//wp_register_style( 'open-sans', false );
 	}
-	
-	/**
-	 * Get current page number
-	 * @return current page number
-	 */
-	public static function get_current_page_number() {
-		global $wp_query;
-	
-		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		return $paged;
-	}
-	
-	/**
-	 * Get max page number
-	 * @return max page number
-	 */
-	public static function get_max_page_number() {
-		global $wp_query;
-	
-		$max_page = $wp_query->max_num_pages;
-		return $max_page;
-	}
-}
-
-add_action( 'init', 'custom_post_type_news' );
-function custom_post_type_news() {
-	register_post_type( 'news', array(
-	'labels' => array(
-	'name' 					=> 'お知らせ',
-	'add_new_item'	=> 'お知らせを追加',
-	'edit_item'			=> 'お知らせの編集',
-	),
-	'public' => true,
-	'hierarchical' => false,
-	'has_archive' => true,
-	'supports' => array(
-	'title',
-	'editor',
-	'custom-fields',
-	'thumbnail',
-	),
-	'menu_position' => 5,
-	) );
 }

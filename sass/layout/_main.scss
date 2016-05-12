@@ -1,0 +1,21 @@
+#main {
+	background-color: #999;
+	padding: 1.6rem;
+	
+	&.p-single {
+	
+		.single-meta {
+			.single-update {
+				text-align: right;
+				font-weight: bold;
+			}
+			.single-tags {
+				text-align: right;
+			}
+		}
+		.single-pager {
+			padding-top: 1.6rem;
+			padding-bottom: 1.6rem;
+		}
+	}
+}

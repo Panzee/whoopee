@@ -1,0 +1,27 @@
+.p-global-nav {
+	overflow: hidden;
+
+	ul {
+    .menu-item {
+    	float: left;
+    	text-align: center;
+    	margin-right: 1.6rem;
+    	
+    	&:last-child {
+    		margin-right: 0;
+    	}
+    	
+    	a {
+    		display: block;
+    		color: #000;
+    		text-decoration: none;
+    		padding: 1rem;
+    	}
+    }
+    list-style: none;
+
+    .current-menu-item {
+    	border-bottom: .1rem solid #00f;
+    }
+	}	
+}
