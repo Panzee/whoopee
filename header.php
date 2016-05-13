@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header id="header">
+<header id="header" class="p-header">
 	<div class="_c-container">
 		<div class="_c-row _c-row--auto _c-row--lg-margin">
 			<div class="_c-row__col">	
@@ -34,6 +34,10 @@
 				<div class="_u-pull-right"><i class="fa fa-bars fa-2x"></i></div>
 			</div><!-- c-row__col -->
 		</div><!-- c-row -->
-		<img class="header-image" src="<?php header_image(); ?>">
 	</div><!-- c-container -->
+	<div class="_c-container-fluid">
+		<div class="p-header__image">
+			<img src="<?php header_image(); ?>">
+		</div>
+	</div><!-- _c-container-fluid -->
 </header>

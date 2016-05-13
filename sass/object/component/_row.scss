@@ -1,0 +1,8 @@
+@include bs-bp-max( 40rem ) {
+	._c-row_col--sm-1-1 {
+		-webkit-flex: 0 1 100%;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+		max-width: 100%;
+	}
+}

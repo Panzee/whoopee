@@ -60,35 +60,35 @@ class _baseFunctions {
 	public function register_sidebar() {
 		register_sidebar( array(
 			'id'						=> 'sidebar',
-			'before_widget'	=> '<section class="p-widget %1$s">',
+			'before_widget'	=> '<section class="p-widget %2$s">',
 			'after_widget'	=> '</section>',
-			'before_title'	=> '<h3 class="p-widget__title">',
-			'after_title'		=> '</h3>',
+			'before_title'	=> '<h1 class="p-widget__title">',
+			'after_title'		=> '</h1>',
 		) );
 		
 		register_sidebar( array(
 			'id'						=> 'footer-1',
 			'name'          => 'フッター 1',
-			'before_widget'	=> '<section id="p-widget %1$s">',
+			'before_widget'	=> '<section class="p-widget %2$s">',
 			'after_widget'	=> '</section>',
-			'before_title'	=> '<h3 class="p-widget__title">',
-			'after_title'		=> '</h3>',
+			'before_title'	=> '<h1 class="p-widget__title">',
+			'after_title'		=> '</h1>',
 		) );
 		register_sidebar( array(
 			'id'						=> 'footer-2',
 			'name'          => 'フッター 2',
-			'before_widget'	=> '<div id="p-widget %1$s">',
-			'after_widget'	=> '</div>',
-			'before_title'	=> '<h3 class="p-widget__title">',
-			'after_title'		=> '</h3>',
+			'before_widget'	=> '<section class="p-widget %2$s">',
+			'after_widget'	=> '</section>',
+			'before_title'	=> '<h1 class="p-widget__title">',
+			'after_title'		=> '</h1>',
 		) );
 		register_sidebar( array(
 			'id'						=> 'footer-3',
 			'name'          => 'フッター 3',
-			'before_widget'	=> '<div id="p-widget %1$s">',
-			'after_widget'	=> '</div>',
-			'before_title'	=> '<h3 class="p-widget__title">',
-			'after_title'		=> '</h3>',
+			'before_widget'	=> '<section class="p-widget %2$s">',
+			'after_widget'	=> '</section>',
+			'before_title'	=> '<h1 class="p-widget__title">',
+			'after_title'		=> '</h1>',
 		) );
 	}
 	
@@ -148,4 +148,11 @@ class _baseFunctions {
 		//wp_deregister_style( 'open-sans-css' );
 		//wp_register_style( 'open-sans', false );
 	}
+}
+
+// タグクラウドのstyle属性を削除
+add_filter( 'wp_tag_cloud', 'remove_tag_cloud_style');
+function remove_tag_cloud_style( $return, $args ) {
+	$return = preg_replace('/\sstyle=\'.+\'/', '', $return);
+	return $return;
 }

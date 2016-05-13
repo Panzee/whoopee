@@ -1,0 +1,16 @@
+.p-header {
+	.p-header__image {
+		margin-left: -1.2rem;
+		margin-right: -1.2rem;
+	}
+}
+
+@include bs-bp-min(40rem) {
+
+	.p-header {
+		.p-header__image {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}

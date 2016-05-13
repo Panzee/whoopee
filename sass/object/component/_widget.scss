@@ -1,0 +1,206 @@
+// RSS
+.widget_rss {
+
+	ul {
+		padding-left: 2.4rem;
+		
+		li {
+			margin-bottom: .8rem;
+			color: #666;
+			
+			.rsswidget {
+			
+			}
+			.rssSummary {
+				margin-top: .8rem;
+				margin-bottom: .8rem;
+				font-size: 1.4rem;
+			}
+			cite {
+				font-size: 1.4rem;
+			}
+			.rss-date {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+// 最近の投稿
+.widget_recent_entries {
+
+	ul {
+		padding-left: 2.4rem;
+	
+		li {
+			color: #aaa;
+			margin-bottom: .8rem;
+			
+			a {
+				// color: #333;
+				margin-right: .4rem;
+			}
+			.post-date {
+				font-size: 1.2rem;
+				color: #666;
+			}
+		}
+	}
+}
+
+// カスタムメニュー
+.widget_nav_menu {
+	
+	.menu {
+		padding-left: 2.4rem;
+		
+		.menu-item {
+			margin-top: .8rem;
+			margin-bottom: .8rem;
+			color: #666;
+			
+			.sub-menu {
+				padding-left: 0;
+				margin-left: .8rem;
+				
+				.menu-item {
+					list-style: none;
+					
+					&:before {
+						content: 'ー';
+						margin-right: .8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// カテゴリー
+.widget_categories {
+
+	// ドロップダウンリスト
+	.postform {
+		@include bs-c-form-control();
+	}
+	
+	ul {
+		padding-left: 2.4rem;
+		
+		.cat-item {
+			margin-top: .8rem;
+			margin-bottom: .8rem;
+			color: #666;
+			
+			.children {
+				padding-left: 0;
+				margin-left: .8rem;
+				
+				.cat-item {
+					list-style: none;
+					
+					&:before {
+						content: 'ー';
+						margin-right: .8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// アーカイブ
+.widget_archive {
+	
+	select {
+		@include bs-c-form-control();
+	}
+	
+	ul {
+		padding-left: 2.4rem;
+		
+		li {
+			margin-bottom: .8rem;
+			color: #666;
+		}
+	}
+}
+
+// タグクラウド
+.widget_tag_cloud {
+
+	.tagcloud {
+		a {
+			@include bs-c-btn();
+			padding-left: .8rem;
+			padding-right: .8rem; 
+			margin-bottom: .4rem;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+// 最近のコメント
+.widget_recent_comments {
+
+	ul {
+		padding-left: 2.4rem;
+		
+		.recentcomments {
+			margin-bottom: .8rem;
+			color: #666;
+
+			.comment-author-link {
+			}
+		}
+	}
+}
+
+// カレンダー
+.widget_calendar {
+
+	#wp-calendar {
+		width: 100%;
+		
+		tbody {
+			tr {
+				td {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// テキスト
+.widget_text {
+
+	.textwidget {
+	}
+}
+
+// 固定ページ
+.widget_pages {
+
+	ul {
+		padding-left: 2.4rem;
+		
+		.page_item {
+			margin-bottom: .8rem;
+			color: #666;
+		}
+	}
+}
+
+// メタ情報
+.widget_meta {
+	
+	ul {
+		padding-left: 2.4rem;
+		
+		li {
+			margin-bottom: .8rem;
+			color: #666;
+		}
+	}
+}
