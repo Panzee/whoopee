@@ -17,7 +17,8 @@
 			</div>
 			<?php endif; ?>
 		</div><!-- _c-row -->
-		<p>テーマを提供してます<a href="#">ここから</a></p>
+		<p class="p-footer__copyright">Copyright&copy; <?php bloginfo( 'name' ); ?> <?php echo date( 'Y' ); ?> All Rights Reserved.</p></p>
+		<p class="p-footer__powerd-by">Template by <a href="#">whoopee</a></p>
 	</div><!-- _c-container -->
 	<?php wp_footer(); ?>
 </footer>

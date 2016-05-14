@@ -3,7 +3,6 @@
 	.p-widget {
 		border: 1px solid #cccccc;
 		padding: .8rem;
-		margin-bottom: 1.6rem;
 		background-color: #eee;
 		
 		.p-widget__title {
@@ -11,6 +10,26 @@
 			margin-top: 0;
 			margin-bottom: 1.6rem;
 			text-align: center;
+		}
+	}
+	
+	.p-footer__copyright {
+		font-size:: 1.4rem;
+		color: #eee;
+		text-align: center;
+		margin-top: 3.2rem;
+		margin-bottom: 1.6rem;
+	}
+	
+	.p-footer__powerd-by {
+		margin-bottom: 0;
+		font-size: 1.2rem;
+		color: #eee;
+		text-align: right;
+		
+		a {
+			color: #eee;
+			text-decoration: none;
 		}
 	}
 }

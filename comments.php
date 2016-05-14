@@ -6,7 +6,7 @@ if (post_password_required()) {
 
 <section class="p-single__comments">
 <?php if ( have_comments() ) :?>
-	<h3 id="comments"><?php echo get_comments_number() . ' 件のコメント'; ?></h3>
+	<h1 id="comments"><?php echo get_comments_number() . ' 件のコメント'; ?></h1>
 	<ol class="commentlist">
 	<?php wp_list_comments( array(
 			'avatar_size'	=> 48,
