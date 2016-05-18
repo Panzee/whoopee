@@ -1,0 +1,25 @@
+.p-hamburger-nav {
+	display: none;
+	
+	.menu {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+		
+		.menu-item {
+			text-align: center;
+			border-bottom: solid #aaa .1rem;
+			
+			&:last-child{
+				border-bottom: none;
+			}
+			
+			> a {
+				display: block;
+				padding: .8rem;
+				text-decoration: none;
+				color: #333;
+			}
+		}
+	}
+}

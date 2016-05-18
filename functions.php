@@ -368,6 +368,7 @@ class Whoopee_Customize {
 		$css .= 'top:0;';
 		$css .= 'left:0;';
 		$css .= 'right:0;';
+		$css .= 'box-shadow:0 .1rem .3rem .1rem #aaa;';
 		$css .= '}';
 		return $css;
 	}

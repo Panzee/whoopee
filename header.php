@@ -10,9 +10,9 @@
 </head>
 <body <?php body_class(); ?>>
 <header id="header" class="p-header">
-	<div class="p-site-header is-site-header">
+	<div class="p-header-area1 is-site-header">
 		<div class="_c-container">
-			<div class="_c-row _c-row--auto c-row--nowrap">
+			<div class="_c-row _c-row--top _c-row--auto c-row--nowrap">
 				<div class="_c-row__col">	
 					<div class="p-site-brand">
 						<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
@@ -20,11 +20,10 @@
 			    	<?php else : ?>
 							<h1 class="p-site-brand__title"><a class="p-site-brand__link" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php endif; ?>
-						<p class="p-site-brand__description"><?php bloginfo( 'description' ); ?></p>
 					</div><!-- p-site-brand -->
 				</div><!-- c-row__col -->
 				<div class="_c-row__col _u-hidden-sm _u-hidden-md">
-					<div class="p-global-nav _u-pull-right">
+					<div class="p-global-nav">
 						<?php wp_nav_menu( array(
 							'theme_location'  => 'global',
 							'container'				=> false,
@@ -32,14 +31,25 @@
 					</div><!-- p-site-global-nav -->
 				</div><!-- c-row__col -->
 				<div class="_c-row__col _u-hidden-lg">
-					<div class="_u-pull-right"><i class="fa fa-bars fa-2x"></i></div>
+					<div class="p-hamburger-menu is_hamburger"><i class="fa fa-bars fa-2x"></i></div>
 				</div><!-- c-row__col -->
 			</div><!-- c-row -->
+			<div class="p-hamburger-nav">
+				<?php wp_nav_menu( array(
+					'theme_location'  => 'global',
+					'container'				=> false,
+				) ); ?>
+			</div><!-- p-site-global-nav -->
 		</div><!-- c-container -->
-	</div><!-- c-site-header -->
-	<div class="p-header__image">
+	</div><!-- p-header-area1 -->
+	<div class="p-header-area2">
 		<div class="_c-container">
-			<img src="<?php header_image(); ?>">
+			<p class="p-header__description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- _c-container -->
-	</div>
+	</div><!-- p-header-area2 -->
+	<div class="p-header-area3">
+		<div class="_c-container">
+			<div class="p-header__image"><img src="<?php header_image(); ?>"></div>
+		</div><!-- _c-container -->
+	</div><!-- p-header-area3 -->
 </header>

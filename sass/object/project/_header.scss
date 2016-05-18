@@ -1,7 +1,12 @@
 .p-header {
-	.p-header__image {
+	&__image {
 		margin-left: -1.2rem;
 		margin-right: -1.2rem;
+	}
+	
+	&__description {
+		margin-bottom: 0;
+		margin-left: .8rem;
 	}
 }
 

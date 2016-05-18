@@ -46,6 +46,16 @@
   padding-bottom: 1.6rem;
 }
 
+.p-header-area1 {
+  padding: .8rem;
+  background-color: #fff;
+}
+
+.p-header-area2 {
+  padding: .8rem;
+  background-color: #aaa;
+}
+
 .c-archive-entry__body {
   padding: .8rem;
 }
@@ -540,38 +550,82 @@
   text-decoration: none;
 }
 
-.p-global-nav {
-  overflow: hidden;
-}
-
-.p-global-nav ul {
+.p-global-nav .menu {
   list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-bottom: 0;
+  padding: 0;
 }
 
-.p-global-nav ul .menu-item {
-  float: left;
+.p-global-nav .menu .menu-item {
+  margin: 0;
+  padding: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   text-align: center;
-  margin-right: 1.6rem;
 }
 
-.p-global-nav ul .menu-item:last-child {
-  margin-right: 0;
-}
-
-.p-global-nav ul .menu-item a {
+.p-global-nav .menu .menu-item > a {
   display: block;
-  color: #000;
   text-decoration: none;
-  padding: 1rem;
+  padding: .8rem 1.6rem .4rem;
+  color: #333;
 }
 
-.p-global-nav ul .current-menu-item {
-  border-bottom: .1rem solid #00f;
+.p-hamburger-menu {
+  text-align: right;
 }
 
-.p-header .p-header__image {
+.p-hamburger-menu :hover {
+  cursor: pointer;
+}
+
+.p-hamburger-nav {
+  display: none;
+}
+
+.p-hamburger-nav .menu {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.p-hamburger-nav .menu .menu-item {
+  text-align: center;
+  border-bottom: solid #aaa .1rem;
+}
+
+.p-hamburger-nav .menu .menu-item:last-child {
+  border-bottom: none;
+}
+
+.p-hamburger-nav .menu .menu-item > a {
+  display: block;
+  padding: .8rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.p-header__image {
   margin-left: -1.2rem;
   margin-right: -1.2rem;
+}
+
+.p-header__description {
+  margin-bottom: 0;
+  margin-left: .8rem;
 }
 
 @media (min-width: 40rem) {
@@ -755,8 +809,8 @@
 }
 
 .p-site-brand__title {
-  font-size: 3.2rem;
-  margin-bottom: 1.6rem;
+  font-size: 3.6rem;
+  margin-bottom: 0;
 }
 
 .p-site-brand__link {
@@ -764,11 +818,6 @@
   color: #333;
 }
 
-.p-site-brand__description {
-  margin-bottom: 1.6rem;
-}
-
-.p-site-header {
-  padding-top: 1.6rem;
-  background-color: #fff;
+.u-visible {
+  display: block;
 }
