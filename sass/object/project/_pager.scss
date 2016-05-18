@@ -33,3 +33,30 @@
 		}
 	}
 }
+
+.page-links {
+	text-align: center;
+	
+	> a {
+		background-color: #fff;
+	  border: 1px solid #cccccc;
+	  color: #333;
+	  cursor: pointer;
+	  display: inline-block;
+	  padding: 0.8rem 2.4rem;
+	  text-align: center;
+	  text-decoration: none;
+	  overflow: hidden;
+	}
+	
+	> span {
+		background-color: #00f;
+	  border: 1px solid #cccccc;
+	  color: #fff;
+	  display: inline-block;
+	  padding: 0.8rem 2.4rem;
+	  text-align: center;
+	  text-decoration: none;
+	  overflow: hidden;
+	}
+}

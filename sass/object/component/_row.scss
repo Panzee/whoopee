@@ -7,6 +7,14 @@
 	}
 }
 
-._c-row--reverse {
-	flex-direction : row-reverse;
+.c-row--reverse {
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+}
+
+.c-row--nowrap {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }

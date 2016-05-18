@@ -50,6 +50,12 @@
 		font-size: 1.7rem;
 		line-height: 1.8;
 	}
+	blockquote {
+    border-left: .4rem solid #aaa;
+    background-color: #eee;
+    padding: 20px;
+    margin-right: 0;
+  }
 	
 	.p-single__comments {
 		background-color: #ccc;

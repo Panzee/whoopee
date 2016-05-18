@@ -1,6 +1,6 @@
 <form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 	<label>
-		<input type="search" class="_c-form-control" placeholder="サイト内検索" value="<?php echo get_search_query() ?>" name="s" title="検索フォーム" />
+		<input type="search" class="c-form-control" placeholder="サイト内検索" value="<?php echo get_search_query() ?>" name="s" title="検索フォーム" />
 	</label>
-	<button type="submit" class="_c-form-control">検索</button>
+	<button type="submit" class="c-form-control">検索</button>
 </form>

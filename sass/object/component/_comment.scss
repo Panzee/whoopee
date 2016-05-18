@@ -100,11 +100,21 @@
 			margin-bottom: 0;
 		}
 		
-		input[type=text], input[type=email], input[type=url], input[type=submit] {
-			@include bs-c-form-control();
+		input[type=text], input[type=email], input[type=url] {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: .8rem 1.6rem;
+		}
+		input[type=submit] {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: .8rem 1.6rem;
+			cursor: pointer;
 		}
 		textarea {
-			@include bs-c-form-control();
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: .8rem 1.6rem;
 			width: 100%;
 			height: auto;
 		}
