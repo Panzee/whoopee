@@ -1,5 +1,5 @@
 jQuery( function() {
-	jQuery( '.is_hamburger' ).click( function() {
+	jQuery( '.is-click-hamburger' ).click( function() {
 		jQuery( '.p-hamburger-nav' ).toggleClass( 'u-visible' );
 	});	
 });

@@ -1,3 +1,1 @@
-<?php 
-
-echo "page";
+<?php echo "page"; ?>

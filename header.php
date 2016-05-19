@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 <header id="header" class="p-header">
 	<div class="p-header-area1 is-site-header">
-		<div class="_c-container">
+		<div class="c-container">
 			<div class="_c-row _c-row--top _c-row--auto c-row--nowrap">
 				<div class="_c-row__col">	
 					<div class="p-site-brand">
@@ -31,7 +31,7 @@
 					</div><!-- p-site-global-nav -->
 				</div><!-- c-row__col -->
 				<div class="_c-row__col _u-hidden-lg">
-					<div class="p-hamburger-menu is_hamburger"><i class="fa fa-bars fa-2x"></i></div>
+					<div class="p-hamburger-menu is-click-hamburger"><i class="fa fa-bars fa-2x"></i></div>
 				</div><!-- c-row__col -->
 			</div><!-- c-row -->
 			<div class="p-hamburger-nav">
@@ -39,17 +39,17 @@
 					'theme_location'  => 'global',
 					'container'				=> false,
 				) ); ?>
-			</div><!-- p-site-global-nav -->
+			</div><!-- p-hamburger-nav -->
 		</div><!-- c-container -->
 	</div><!-- p-header-area1 -->
 	<div class="p-header-area2">
-		<div class="_c-container">
+		<div class="c-container">
 			<p class="p-header__description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- _c-container -->
+		</div><!-- c-container -->
 	</div><!-- p-header-area2 -->
 	<div class="p-header-area3">
-		<div class="_c-container">
+		<div class="c-container">
 			<div class="p-header__image"><img src="<?php header_image(); ?>"></div>
-		</div><!-- _c-container -->
+		</div><!-- c-container -->
 	</div><!-- p-header-area3 -->
 </header>

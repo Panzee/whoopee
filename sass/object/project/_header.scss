@@ -10,7 +10,7 @@
 	}
 }
 
-@include bs-bp-min(40rem) {
+@media (min-width: 40em) {
 
 	.p-header {
 		.p-header__image {

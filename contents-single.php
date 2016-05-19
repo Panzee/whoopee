@@ -1,5 +1,5 @@
-<div class="_c-row _c-row--margin is-contents-layout">
-	<div class="_c-row__col _c-row__col--1-1 is-main-row">
+<div class="c-row is-contents-layout">
+	<div class="c-row__col c-row__col--1-1 is-main-row">
 		<main id="main">
 			<?php
 				if ( have_posts() ) :
@@ -32,8 +32,8 @@
 				<div class="p-pager__next"><?php next_post_link('%link', '次の記事'); ?></div>
 			</div><!-- p-single-pager -->
 		</main>
-	</div><!-- _c-row__col -->
-	<div class="_c-row__col _c-row__col--1-1 is-side-row">
+	</div><!-- c-row__col -->
+	<div class="c-row__col c-row__col--1-1 is-side-row">
 		<?php get_sidebar(); ?>
-	</div><!-- _c-row__col -->
-</div><!-- _c-row -->
+	</div><!-- c-row__col -->
+</div><!-- c-row -->

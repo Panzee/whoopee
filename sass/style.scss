@@ -1,5 +1,4 @@
-$bs-use-mixin-only: true;
-@import 'sass-basis/src/scss/basis';
 @import 'core/core';
+@import 'foundation/foundation';
 @import 'layout/layout';
 @import 'object/object';

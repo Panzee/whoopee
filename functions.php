@@ -205,7 +205,7 @@ class Whoopee_Customize {
 				'choices'    => array(
 						'default' => '設定なし',
 						'hedaer-fixed' => 'ヘッダー固定',
-						'no-radio-menu' => 'ハンバーガーメニューにしない（スマホ時）',
+						//'no-radio-menu' => 'ハンバーガーメニューにしない（スマホ時）',
 				),
 				'priority'	=> 20,
 		));

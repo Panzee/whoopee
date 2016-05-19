@@ -1,37 +1,37 @@
-.c-archive-entry__body {
+.p-archive-entry__body {
 	padding: .8rem;
 
-	.c-archive-entry__title {
+	.p-archive-entry__title {
 		margin-top: 0;
 		font-size: 2.4rem;
 		
-		a {
+		> a {
 			text-decoration: none;
 			color: #333;
 		}
 		
 	}
 	
-	.c-archive-entry__excerpt {
+	.p-archive-entry__excerpt {
 		
-		a {
+		> a {
 			text-decoration: none;
 			color: #333;
 		}
 	}
 	
-	.c-archive-entry__meta {
+	.p-archive-entry__meta {
 		overflow: hidden;
 		font-size: 1.2rem;
 		
-		.c-archive-entry__datetime {
+		.p-archive-entry__datetime {
 			float: left;
 			margin-right: 1.6rem;
 		}
-		.c-archive-entry__tags {
+		.p-archive-entry__tags {
 			float: left;
 			
-			a {
+			> a {
 				text-decoration: none;
 				color: #333;
 			}

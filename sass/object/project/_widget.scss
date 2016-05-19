@@ -81,7 +81,12 @@
 
 	// ドロップダウンリスト
 	.postform {
-		@include bs-c-form-control();
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 0;	
+		padding: .8rem 1.6rem;
+		max-width: 100%;
+		color: #333;
 	}
 	
 	ul {
@@ -113,7 +118,11 @@
 .widget_archive {
 	
 	select {
-		@include bs-c-form-control();
+		background-color: #fff;
+		border: 1px solid #ccc;
+		padding: .8rem 1.6rem;
+		max-width: 100%;
+		color: #333;
 	}
 	
 	ul {
@@ -131,9 +140,17 @@
 
 	.tagcloud {
 		a {
-			@include bs-c-btn();
-			padding-left: .8rem;
-			padding-right: .8rem; 
+			background-color: #fff;
+	    border: 1px solid #cccccc;
+	    color: #333;
+	    cursor: pointer;
+	    display: inline-block;
+	    padding: .8rem 3.2rem;
+	    text-align: center;
+	    text-decoration: none;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    overflow: hidden;
 			margin-bottom: .4rem;
 			font-size: 1.2rem;
 		}

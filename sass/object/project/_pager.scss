@@ -5,14 +5,34 @@
 	.p-pager__previous {
 		
 		a {
-			@include bs-c-btn();
+			background-color: #fff;
+	    border: 1px solid #cccccc;
+	    color: #333;
+	    cursor: pointer;
+	    display: inline-block;
+	    padding: 0.8rem 3.2rem;
+	    text-align: center;
+	    text-decoration: none;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    overflow: hidden;
 		}
 	}
 	
 	.p-pager__paginate {
 		
 		.page-numbers {
-			@include bs-c-btn();
+			background-color: #fff;
+	    border: 1px solid #cccccc;
+	    color: #333;
+	    cursor: pointer;
+	    display: inline-block;
+	    padding: 0.8rem 3.2rem;
+	    text-align: center;
+	    text-decoration: none;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    overflow: hidden;
 			
 			&.current {
 				cursor: default;
@@ -29,7 +49,17 @@
 	.p-pager__next {
 		
 		a {
-			@include bs-c-btn();
+			background-color: #fff;
+	    border: 1px solid #cccccc;
+	    color: #333;
+	    cursor: pointer;
+	    display: inline-block;
+	    padding: 0.8rem 3.2rem;
+	    text-align: center;
+	    text-decoration: none;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    overflow: hidden;
 		}
 	}
 }
