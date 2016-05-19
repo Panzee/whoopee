@@ -1,13 +1,12 @@
 .p-archive-entry__body {
-	padding: .8rem;
+	padding: $padding-size-xs;
 
 	.p-archive-entry__title {
-		margin-top: 0;
-		font-size: 2.4rem;
+		font-size: $font-size-heading-lg;
 		
 		> a {
 			text-decoration: none;
-			color: #333;
+			color: $color-text;
 		}
 		
 	}
@@ -16,7 +15,7 @@
 		
 		> a {
 			text-decoration: none;
-			color: #333;
+			color: $color-text;
 		}
 	}
 	
@@ -26,14 +25,14 @@
 		
 		.p-archive-entry__datetime {
 			float: left;
-			margin-right: 1.6rem;
+			margin-right: $margin-size-sm;
 		}
 		.p-archive-entry__tags {
 			float: left;
 			
 			> a {
 				text-decoration: none;
-				color: #333;
+				color: $color-text;
 			}
 		}
 	}	

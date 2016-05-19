@@ -1,19 +1,16 @@
 .p-header {
 	&__image {
-		margin-left: -1.2rem;
-		margin-right: -1.2rem;
+		margin-left: -$margin-size-xs;
+		margin-right: -$margin-size-xs;
 	}
 	
 	&__description {
 		margin-bottom: 0;
-		margin-left: .8rem;
+		margin-left: $margin-size-xs;
 	}
-}
-
-@media (min-width: 40em) {
-
-	.p-header {
-		.p-header__image {
+	
+	&__image {
+		@media (min-width: $breakpoint-sm-to-md) {
 			margin-left: 0;
 			margin-right: 0;
 		}

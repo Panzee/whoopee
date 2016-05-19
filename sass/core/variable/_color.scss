@@ -1,23 +1,6 @@
-//
-// Default text color
-// @type  hex
-//
-$bs-color-text: #333 !default;
+$color-text: #333 !default;
+$color-text-thin: #666 !default;
 
-//
-// Default black color
-// @type  hex
-//
-$bs-color-black: #111 !default;
-
-//
-// Default gray color
-// @type  hex
-//
-$bs-color-gray: #999 !default;
-
-//
-// Default red color
-// @type  hex
-//
-$bs-color-red: #e74c3c !default;
+$color-header: #fff !default;
+$color-contents: #fff !default;
+$color-footer: #999 !default;

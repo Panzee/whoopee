@@ -2,8 +2,6 @@
 	
 	.menu {
 		list-style: none;
-		display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -23,13 +21,13 @@
     	&:last-child {
     		//border-right: .1rem solid #cccccc;
     	}
-    }
-		
-		.menu-item > a {
-	    display: block;
-	    text-decoration: none;
-	    padding: .8rem 1.6rem .4rem;
-	    color: #333;
+    	
+    	> a {
+		    display: block;
+		    text-decoration: none;
+		    padding: $padding-size-xs $padding-size-sm;
+		    color: $color-text;
+	    }
     }
 
     .current-menu-item {

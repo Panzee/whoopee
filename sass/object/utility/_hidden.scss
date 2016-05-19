@@ -1,0 +1,22 @@
+.u-hidden-sm {
+
+	@media (max-width: $breakpoint-sm-to-md) {
+		display: none;
+	}
+}
+
+.u-hidden-md {
+
+	@media (min-width: $breakpoint-sm-to-md) {
+		@media (max-width: $breakpoint-md-to-lg) {
+			display: none;
+		}
+	}	
+}
+
+.u-hidden-lg {
+
+	@media (min-width: $breakpoint-md-to-lg) {
+		display: none;
+	}
+}

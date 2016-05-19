@@ -1,9 +1,17 @@
-// サイトのヘッダー
-$site-title-size: 3.2rem;
-$site-description-size: 1.6rem;;
+$padding-size-xs: .8rem !default;
+$padding-size-sm: 1.6rem !default;
+$padding-size-md: 2.4rem !default;
+$padding-size-lg: 3.6rem !default;
 
-// 
-$archive-head-title-size: 2.8rem;
-$archive-title-size: 2.4rem;
-$archive-excerpt-size: 1.6rem;
-$archive-meta-size: .8rem;
+$margin-size-xs: .8rem !default;
+$margin-size-sm: 1.6rem !default;
+$margin-size-md: 2.4rem !default;
+$margin-size-lg: 3.6rem !default;
+
+$font-size-heading-lgx3: 3.6rem !default;
+$font-size-heading-lgx2: 3.2rem !default;
+$font-size-heading-lgx: 2.8rem !default;
+$font-size-heading-lg: 2.4rem !default;
+$font-size-heading-md: 2.2rem !default;
+$font-size-heading-sm: 2rem !default;
+$font-size-heading-xs: 1.8rem !default;

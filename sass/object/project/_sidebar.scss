@@ -1,16 +1,15 @@
 .p-sidebar {
 
 	.p-widget {
-		border: 1px solid #cccccc;
+		border: .1rem solid #cccccc;
 		background-color: #eee;
-		padding: .8rem;
-		margin-bottom: 1.6rem;
+		padding: $margin-size-xs;
+		margin-bottom: $margin-size-sm;
 		
-		.p-widget__title {
-			font-size: 2rem;
+		&__title {
+			font-size: $font-size-heading-sm;
 			margin-top: 0;
-			margin-bottom: 1.6rem;
+			margin-bottom: $margin-size-sm;
 		}
 	}
-
 }

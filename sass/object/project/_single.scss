@@ -1,29 +1,29 @@
 .p-single {
 	
-	.p-single__title {
+	&__title {
+		font-size: $font-size-heading-lgx2;
 		margin-top: 0;
-		margin-bottom: 1.6rem;
-		font-size: 3rem;
+		margin-bottom: $margin-size-sm;
 	}
 	
-	.p-single__meta {
-		margin-bottom: 1.6rem;
+	&__meta {
+		margin-bottom: $margin-size-sm;
 		font-size: 1.4rem;
 		text-align: right;
 	}
 	
-	.p-single__post {
+	&__post {
 		display: inline-block;
 	}
-	.p-single__update {
+	&__update {
 		display: inline-block;
-		margin-left: 1.6rem;
+		margin-left: $margin-size-sm;
 	}
 	
-	.p-single__tags {
-		margin-top: .4rem;
-		a {
-			margin-right: .8rem;
+	&__tags {
+		margin-top: $margin-size-xs;
+		> a {
+			margin-right: $margin-size-xs;
 			
 			&:last-child {
 				margin-right: 0;
@@ -32,19 +32,19 @@
 	}
 	
 	h2 {
-		font-size: 2.8rem;
+		font-size: $font-size-heading-lgx;
 	}
 	h3 {
-		font-size: 2.4rem;
+		font-size: $font-size-heading-lg;
 	}
 	h4 {
-		font-size: 2.2rem;
+		font-size: $font-size-heading-md;
 	}
 	h5 {
-		font-size: 2.0rem;
+		font-size: $font-size-heading-sm;
 	}
 	h6 {
-		font-size: 1.8rem;
+		font-size: $font-size-heading-xs;
 	}
 	p {
 		font-size: 1.7rem;
@@ -53,13 +53,13 @@
 	blockquote {
     border-left: .4rem solid #aaa;
     background-color: #eee;
-    padding: 20px;
+    padding: $padding-size-md;
     margin-right: 0;
   }
 	
 	.p-single__comments {
 		background-color: #ccc;
-		padding: .8rem;
-		margin-bottom: 1.6rem;
+		padding: $padding-size-xs;
+		margin-bottom: $margin-size-sm;
 	}
 }

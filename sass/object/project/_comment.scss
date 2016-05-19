@@ -1,8 +1,8 @@
 // コメントのタイトル
 #comments {
 	margin-top: 0;
-	margin-bottom: 1.6rem;
-	font-size: 2.4rem;
+	margin-bottom: $margin-size-sm;
+	font-size: $font-size-heading-lg;
 }
 
 // コメントの一覧
@@ -12,42 +12,42 @@
 	
 	.comment {
 		background-color: #fff;
-		padding: .8rem;
-		margin-bottom: 1.6rem;
-		border: 1px solid #cccccc;
-	}	
+		padding: $padding-size-xs;
+		margin-bottom: $margin-size-sm;
+		border: .1rem solid #cccccc;
+	}
 	.comment-metadata {
 		font-size: 1.4rem;
-		margin-bottom: .4rem;
+		margin-bottom: $margin-size-xs;
 		
-		a {
+		> a {
 			text-decoration: none;
-			color: #333;
+			color: $color-text;
 		}
 	}
 	.reply {
 		text-align: right;
-		padding-right: .8rem;
-		margin-bottom: .8rem;
+		padding-right: $padding-size-xs;
+		margin-bottom: $padding-size-xs;
 	}
 	.children {
 		list-style: none;
 		padding: 0;
-		margin-left: .8rem;
+		margin-left: $margin-size-xs;
 	}
 }
 
 // コメントの送信フォーム
 .comment-respond {
 	background-color: #fff;
-	padding: .8rem;
-	margin-bottom: 1.6rem;
+	padding: $padding-size-xs;
+	margin-bottom: $margin-size-sm;
 	border: .1rem solid #cccccc;
-	
+
 	.comment-reply-title {
-		font-size: 2.4rem;
+		font-size: $font-size-heading-lg;
 		margin-top: 0;
-		margin-bottom: 1.6rem;
+		margin-bottom: $margin-size-sm;
 	}
 	
 	.comment-form {
@@ -55,7 +55,7 @@
 		.comment-form-comment {
 			label {
 				display: block;
-				margin-bottom: .4rem;
+				margin-bottom: $margin-size-xs;
 			}
 		}
 		
@@ -65,11 +65,10 @@
 			
 			label {
 				flex: 0 1 33.33333%;
-				padding: .8rem 0;
+				padding: $padding-size-xs 0;
 			}
 			input[type=text] {
 				flex: 0 1 66.66667%;
-				width: 100%;
 			}
 		}
 		.comment-form-email {
@@ -78,12 +77,10 @@
 			
 			label {
 				flex: 0 1 33.33333%;
-				padding: .8rem 0;
+				padding: $padding-size-xs 0;
 			}
 			input[type=email] {
 				flex: 0 1 66.66667%;
-				width: 100%;
-				align-items: center;
 			}
 		}
 		.comment-form-url {
@@ -92,11 +89,10 @@
 			
 			label {
 				flex: 0 1 33.33333%;
-				padding: .8rem 0;
+				padding: $padding-size-xs 0;
 			}
 			input[type=url] {
 				flex: 0 1 66.66667%;
-				width: 100%;
 			}
 		}
 		.form-submit {
@@ -105,19 +101,20 @@
 		
 		input[type=text], input[type=email], input[type=url] {
 			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: .8rem 1.6rem;
+			border: .1rem solid #ccc;
+			padding: $padding-size-xs $padding-size-sm;
 		}
 		input[type=submit] {
+			color: $color-text;
 			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: .8rem 1.6rem;
+			border: .1rem solid #ccc;
+			padding: $padding-size-xs $padding-size-sm;
 			cursor: pointer;
 		}
 		textarea {
 			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: .8rem 1.6rem;
+			border: .1rem solid #ccc;
+			padding: $padding-size-xs $padding-size-sm;
 			width: 100%;
 			height: auto;
 		}

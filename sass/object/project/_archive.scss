@@ -1,29 +1,25 @@
 .p-archive {
 
-	.p-archive__title {
-		font-size: 2.8rem;
-		margin-bottom: 1.6rem;
-		color: #333;
+	&__title {
+		font-size: $font-size-heading-lgx2;
+		margin-bottom: $margin-size-sm;
 	}
 	
-	.p-archive__description {
+	&__description {
 		border: .1rem solid #cccccc;
 		background-color: #fff;
-		padding: .8rem;
-		margin-bottom: 3.2rem;
+		padding: $padding-size-xs;
+		margin-bottom: $margin-size-lg;
 		
-		p {
-			&:last-child {
-				margin-bottom: 0;
-			}
+		p:last-child {
+			margin-bottom: 0;
 		}
 	}
 
-	.p-archive__entry {
-		margin-bottom: 3.2rem;
-		padding-bottom: 2.4rem;
+	&__entry {
+		margin-bottom: $margin-size-lg;
+		padding-bottom: $padding-size-md;
 		border: .1rem solid #cccccc;
 		background-color: #fff;
 	}
-	
 }

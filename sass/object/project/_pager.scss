@@ -2,37 +2,31 @@
 	display: flex;
 	justify-content: space-between;
 	
-	.p-pager__previous {
+	&__previous {
 		
-		a {
+		> a {
 			background-color: #fff;
-	    border: 1px solid #cccccc;
-	    color: #333;
+	    border: .1rem solid #cccccc;
+	    color: $color-text;
 	    cursor: pointer;
 	    display: inline-block;
-	    padding: 0.8rem 3.2rem;
+	    padding: $padding-size-xs $padding-size-lg;
 	    text-align: center;
 	    text-decoration: none;
-	    vertical-align: middle;
-	    white-space: nowrap;
-	    overflow: hidden;
 		}
 	}
 	
-	.p-pager__paginate {
+	&__paginate {
 		
 		.page-numbers {
 			background-color: #fff;
-	    border: 1px solid #cccccc;
-	    color: #333;
+	    border: .1rem solid #cccccc;
+	    color: $color-text;
 	    cursor: pointer;
 	    display: inline-block;
-	    padding: 0.8rem 3.2rem;
+	    padding: $padding-size-xs $padding-size-lg;
 	    text-align: center;
 	    text-decoration: none;
-	    vertical-align: middle;
-	    white-space: nowrap;
-	    overflow: hidden;
 			
 			&.current {
 				cursor: default;
@@ -46,20 +40,17 @@
 		}
 	}
 	
-	.p-pager__next {
+	&__next {
 		
-		a {
+		> a {
 			background-color: #fff;
-	    border: 1px solid #cccccc;
-	    color: #333;
+	    border: .1rem solid #cccccc;
+	    color: $color-text;
 	    cursor: pointer;
 	    display: inline-block;
-	    padding: 0.8rem 3.2rem;
+	    padding: $padding-size-xs $padding-size-lg;
 	    text-align: center;
 	    text-decoration: none;
-	    vertical-align: middle;
-	    white-space: nowrap;
-	    overflow: hidden;
 		}
 	}
 }
@@ -69,24 +60,23 @@
 	
 	> a {
 		background-color: #fff;
-	  border: 1px solid #cccccc;
-	  color: #333;
+	  border: .1rem solid #cccccc;
+	  color: $color-text;
 	  cursor: pointer;
 	  display: inline-block;
-	  padding: 0.8rem 2.4rem;
+	 	padding: $padding-size-xs $padding-size-lg;
 	  text-align: center;
 	  text-decoration: none;
-	  overflow: hidden;
 	}
 	
 	> span {
 		background-color: #00f;
-	  border: 1px solid #cccccc;
+	  border: .1rem solid #cccccc;
 	  color: #fff;
+	  font-weight: bold;
 	  display: inline-block;
-	  padding: 0.8rem 2.4rem;
+	  padding: $padding-size-xs $padding-size-lg;
 	  text-align: center;
 	  text-decoration: none;
-	  overflow: hidden;
 	}
 }

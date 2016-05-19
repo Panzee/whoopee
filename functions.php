@@ -202,9 +202,9 @@ class Whoopee_Customize {
 				'settings'	=> 's-whoopee-layout-header',
 				'label'			=> __( 'Header', 'whoopee-layout' ),
 				'type'			=> 'radio',
-				'choices'    => array(
-						'default' => '設定なし',
-						'hedaer-fixed' => 'ヘッダー固定',
+				'choices'   => array(
+						'default' 			=> '設定なし',
+						'hedaer-fixed'	=> 'ヘッダー固定',
 						//'no-radio-menu' => 'ハンバーガーメニューにしない（スマホ時）',
 				),
 				'priority'	=> 20,
@@ -220,7 +220,7 @@ class Whoopee_Customize {
 				'settings'	=> 's-whoopee-header-image',
 				'label'			=> 'ヘッダー画像',
 				'type'			=> 'radio',
-				'choices'    => array(
+				'choices'   => array(
 						'hedaer-image' => '通常ヘッダー',
 						'hero-image'	 => 'ヒーローイメージ',
 				),
@@ -239,38 +239,16 @@ class Whoopee_Customize {
 		));
 		
 		/* colors */
-		$wp_customize->add_setting( 's-whoopee-header-color', array(
-				'default'  => '',
-				'transport'=>'postMessage',
-		));
-		$wp_customize->add_control( 'c-whoopee-header-color', array(
-				'section'		=> 'colors',
-				'settings'	=> 's-whoopee-header-color',
-				'label'			=> 'ヘッダーカラー',
-				'type'			=> 'color',
-				'priority'	=> 30,
-		));
-		$wp_customize->add_setting( 's-whoopee-footer-color', array(
-				'default'  => '',
-				'transport'=>'postMessage',
-		));
-		$wp_customize->add_control( 'c-whoopee-footer-color', array(
-				'section'		=> 'colors',
-				'settings'	=> 's-whoopee-footer-color',
-				'label'			=> 'フッターカラー',
-				'type'			=> 'color',
-				'priority'	=> 40,
-		));
 		$wp_customize->add_setting( 's-whoopee-auto-color', array(
 				'default'  => '',
 				'transport'=>'postMessage',
 		));
 		$wp_customize->add_control( 'c-whoopee-auto-color', array(
-				'section'		=> 'colors',
-				'settings'	=> 's-whoopee-auto-color',
-				'label'			=> '自動カラー設定',
-				'type'			=> 'color',
-				'priority'	=> 50,
+				'section'			=> 'colors',
+				'settings'		=> 's-whoopee-auto-color',
+				'label'				=> '自動カラー設定',
+				'type'				=> 'color',
+				'priority'		=> 50,
 				'description'	=> 'サイト全体に自動で色が設定されます。他で設定した色は無視されます',
 		));
 	}
@@ -279,6 +257,7 @@ class Whoopee_Customize {
   	echo '<style type="text/css">';
     echo self::get_layout_main_css();
     echo self::get_layout_header_css();
+    echo self::get_layout_color_css();
   	echo '</style>'; 
 	}
 
@@ -293,7 +272,7 @@ class Whoopee_Customize {
 	}
 	
 	// LayoutのメインコンテンツのCSS取得
-	function get_layout_main_css() {
+	public function get_layout_main_css() {
 	
 		// レイアウト
 		switch ( get_theme_mod( 's-whoopee-layout-contents' ) ) {
@@ -315,6 +294,7 @@ class Whoopee_Customize {
 				$flex_direction = 'row';
 				$main_width = '66.66667%';
 				$side_width = '33.33333%';
+				break;
 		}
 		// flex-direction
 		$css = '';
@@ -328,8 +308,6 @@ class Whoopee_Customize {
 		$css .= '.is-main-row{';
 		$css .= '-webkit-flex: 1;';
 		$css .= '-ms-flex: 1;';
-		$css .= 'flex: 1;';
-		$css .= 'max-width:' . $main_width . ';';
 		$css .= '-webkit-flex: 0 1 ' . $main_width . ';';
 		$css .= 'flex: 0 1 ' . $main_width . ';';
 		$css .= '}';
@@ -337,8 +315,6 @@ class Whoopee_Customize {
 		$css .= '.is-side-row{';
 		$css .= '-webkit-flex: 1;';
 		$css .= '-ms-flex: 1;';
-		$css .= 'flex: 1;';
-		$css .= 'max-width:' . $side_width . ';';
 		$css .= '-webkit-flex: 0 1 ' . $side_width . ';';
 		$css .= 'flex: 0 1 ' . $side_width . ';';
 		$css .= '}';
@@ -348,7 +324,7 @@ class Whoopee_Customize {
 	}
 	
 	// LayoutのヘッダーコンテンツのCSS取得
-	function get_layout_header_css() {
+	public function get_layout_header_css() {
 		// レイアウト
 		switch ( get_theme_mod( 's-whoopee-layout-header' ) ) {
 			case 'default':
@@ -361,6 +337,7 @@ class Whoopee_Customize {
 				break;
 			default:
 				$position = 'relative';
+				break;
 		}
 		$css = '';
 		$css .= '.is-site-header{';
@@ -371,5 +348,76 @@ class Whoopee_Customize {
 		$css .= 'box-shadow:0 .1rem .3rem .1rem #aaa;';
 		$css .= '}';
 		return $css;
+	}
+	
+	// LayoutのヘッダーコンテンツのCSS取得
+	public function get_layout_color_css() {
+		// レイアウト
+		
+		$hex = get_theme_mod( 's-whoopee-auto-color' );
+		$rgb = self::hex_to_rgb( $hex );
+		
+		$max = max( $rgb );
+		$min = min( $rgb );
+		$max_color = array_search( $max, $rgb );
+		$min_color = array_search( $min, $rgb );
+		
+		// http://www.peko-step.com/tool/hslrgb.html様の計算
+		// 色相
+		if ( $rgb['r'] == $rgb['g'] && $rgb['g'] == $rgb['b'] ) {
+			$h = 0;
+		}
+		
+		switch ($max_color) {
+			case 'r':
+				$h = 60 * ( ( $rgb['g'] - $rgb['b'] ) / ( $max - $min ) );
+				break;
+			case 'g':
+				$h = 60 * ( ( $rgb['b'] - $rgb['r'] ) / ( $max - $min ) ) + 120;
+				break;
+			case 'b':
+				$h = 60 * ( ( $rgb['r'] - $rgb['g'] ) / ( $max - $min ) ) + 240;
+				break;
+			default:
+				$h = 0;
+				break;
+		}
+		if ( $h < 0 ) $h += 360;
+		$h = round( $h );
+		
+		// 彩度
+		$cnt = ( $max + $min ) / 2;
+		if ( $cnt > 127 ) {
+			$cnt = 255 - $cnt;
+			$s = ( $max - $min ) / ( 510 - $max - $min ) * 100;
+		} else {
+			$s = ( $max - $min ) / ( $max + $min ) * 100;
+		}
+		$s = round( $s );
+		
+		// 明度
+		$l = ( $max + $min ) / 2;
+		$l = ( $l / 255 ) * 100;
+		$l = round( $l );
+		
+		$css .= '#footer{';
+		$css .= 'background-color:hsla(' . $h . ',' . $s . '%,' . $l . '%,1);';
+		$css .= '}';
+		return $css;
+	}
+	
+	// habakiri様(http://habakiri.2inc.org/)から拝借・・・
+	public function hex_to_rgb( $hex ) {
+		$hex = str_replace( '#', '', $hex );
+		if ( strlen( $hex ) == 3 ) {
+			$r = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
+			$g = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
+			$b = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
+		} else {
+			$r = hexdec( substr( $hex, 0, 2 ) );
+			$g = hexdec( substr( $hex, 2, 2 ) );
+			$b = hexdec( substr( $hex, 4, 2 ) );
+		}
+		return array( 'r' => (int)$r, 'g' => (int)$g, 'b' => (int)$b );
 	}
 }

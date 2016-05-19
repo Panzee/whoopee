@@ -1,24 +1,24 @@
 .p-footer {
 
 	.p-widget {
-		border: 1px solid #cccccc;
-		padding: .8rem;
+		border: .1rem solid #cccccc;
+		padding: $padding-size-xs;
 		background-color: #eee;
 		
 		.p-widget__title {
-			font-size: 2rem;
+			font-size: $font-size-heading-sm;
 			margin-top: 0;
-			margin-bottom: 1.6rem;
+			margin-bottom: $margin-size-sm;
 			text-align: center;
 		}
 	}
 	
 	.p-footer__copyright {
-		font-size:: 1.4rem;
+		font-size: 1.4rem;
 		color: #eee;
 		text-align: center;
-		margin-top: 3.2rem;
-		margin-bottom: 1.6rem;
+		margin-top: $margin-size-lg;
+		margin-bottom: $margin-size-sm;
 	}
 	
 	.p-footer__powerd-by {
@@ -27,7 +27,7 @@
 		color: #eee;
 		text-align: right;
 		
-		a {
+		> a {
 			color: #eee;
 			text-decoration: none;
 		}

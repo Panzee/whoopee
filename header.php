@@ -12,8 +12,8 @@
 <header id="header" class="p-header">
 	<div class="p-header-area1 is-site-header">
 		<div class="c-container">
-			<div class="_c-row _c-row--top _c-row--auto c-row--nowrap">
-				<div class="_c-row__col">	
+			<div class="c-row c-row--nowrap c-row--auto c-row--between">
+				<div class="c-row__col">	
 					<div class="p-site-brand">
 						<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
 			    		<h1 class="p-site-brand__logo"><a class="p-site-brand__link" href="<?php echo home_url( '/' ); ?>"><?php the_custom_logo(); ?></a></h1>
@@ -22,7 +22,7 @@
 						<?php endif; ?>
 					</div><!-- p-site-brand -->
 				</div><!-- c-row__col -->
-				<div class="_c-row__col _u-hidden-sm _u-hidden-md">
+				<div class="c-row__col u-hidden-sm u-hidden-md">
 					<div class="p-global-nav">
 						<?php wp_nav_menu( array(
 							'theme_location'  => 'global',
@@ -30,7 +30,7 @@
 						) ); ?>
 					</div><!-- p-site-global-nav -->
 				</div><!-- c-row__col -->
-				<div class="_c-row__col _u-hidden-lg">
+				<div class="c-row__col u-hidden-lg">
 					<div class="p-hamburger-menu is-click-hamburger"><i class="fa fa-bars fa-2x"></i></div>
 				</div><!-- c-row__col -->
 			</div><!-- c-row -->
