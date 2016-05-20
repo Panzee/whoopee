@@ -1,19 +1,11 @@
 .p-footer {
 
-	.p-widget {
-		border: .1rem solid #cccccc;
+	&__widget-area {
+		background-color: #aaa;
 		padding: $padding-size-xs;
-		background-color: #eee;
-		
-		.p-widget__title {
-			font-size: $font-size-heading-sm;
-			margin-top: 0;
-			margin-bottom: $margin-size-sm;
-			text-align: center;
-		}
 	}
 	
-	.p-footer__copyright {
+	&__copyright {
 		font-size: 1.4rem;
 		color: #eee;
 		text-align: center;
@@ -21,7 +13,7 @@
 		margin-bottom: $margin-size-sm;
 	}
 	
-	.p-footer__powerd-by {
+	&__powerd-by {
 		margin-bottom: 0;
 		font-size: 1.2rem;
 		color: #eee;

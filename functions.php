@@ -239,25 +239,50 @@ class Whoopee_Customize {
 		));
 		
 		/* colors */
-		$wp_customize->add_setting( 's-whoopee-auto-color', array(
+		$wp_customize -> remove_setting( 'header_textcolor' );
+		$wp_customize -> remove_control( 'header_textcolor' );
+		
+		$wp_customize->add_setting( 's-whoopee-header-color', array(
 				'default'  => '',
 				'transport'=>'postMessage',
 		));
-		$wp_customize->add_control( 'c-whoopee-auto-color', array(
+		$wp_customize->add_control( 'c-whoopee-header-color', array(
 				'section'			=> 'colors',
-				'settings'		=> 's-whoopee-auto-color',
-				'label'				=> '自動カラー設定',
+				'settings'		=> 's-whoopee-header-color',
+				'label'				=> 'ヘッダー色',
 				'type'				=> 'color',
 				'priority'		=> 50,
-				'description'	=> 'サイト全体に自動で色が設定されます。他で設定した色は無視されます',
+		));
+		$wp_customize->add_setting( 's-whoopee-footer-color', array(
+				'default'  => '',
+				'transport'=>'postMessage',
+		));
+		$wp_customize->add_control( 'c-whoopee-footer-color', array(
+				'section'			=> 'colors',
+				'settings'		=> 's-whoopee-footer-color',
+				'label'				=> 'フッター色',
+				'type'				=> 'color',
+				'priority'		=> 60,
+		));
+		$wp_customize->add_setting( 's-whoopee-heading-color', array(
+				'default'  => '',
+				'transport'=>'postMessage',
+		));
+		$wp_customize->add_control( 'c-whoopee-heading-color', array(
+				'section'			=> 'colors',
+				'settings'		=> 's-whoopee-heading-color',
+				'label'				=> '見出し色',
+				'type'				=> 'color',
+				'priority'		=> 70,
 		));
 	}
 	
 	public function header_output() {
   	echo '<style type="text/css">';
-    echo self::get_layout_main_css();
-    echo self::get_layout_header_css();
-    echo self::get_layout_color_css();
+	    echo self::get_layout_main_css();
+	    echo self::get_layout_header_css();
+	    echo self::get_layout_header_color_css();
+	    echo self::get_layout_footer_color_css();
   	echo '</style>'; 
 	}
 
@@ -304,12 +329,13 @@ class Whoopee_Customize {
 		$css .= 'flex-direction:' . $flex_direction . ';';
 		$css .= '}';
 		// row--md--3
-		$css .= '@media (min-width: 40em){';
+		$css .= '@media (min-width: 64em){';
 		$css .= '.is-main-row{';
 		$css .= '-webkit-flex: 1;';
 		$css .= '-ms-flex: 1;';
 		$css .= '-webkit-flex: 0 1 ' . $main_width . ';';
 		$css .= 'flex: 0 1 ' . $main_width . ';';
+		$css .= 'max-width: 100%;';
 		$css .= '}';
 	
 		$css .= '.is-side-row{';
@@ -317,6 +343,7 @@ class Whoopee_Customize {
 		$css .= '-ms-flex: 1;';
 		$css .= '-webkit-flex: 0 1 ' . $side_width . ';';
 		$css .= 'flex: 0 1 ' . $side_width . ';';
+		$css .= 'max-width: 100%;';
 		$css .= '}';
 		$css .= '}';
 	
@@ -328,7 +355,7 @@ class Whoopee_Customize {
 		// レイアウト
 		switch ( get_theme_mod( 's-whoopee-layout-header' ) ) {
 			case 'default':
-				$position = 'relative';
+				$position = 'absolute';
 				break;
 			case 'hedaer-fixed':
 				$position = 'fixed';
@@ -336,7 +363,7 @@ class Whoopee_Customize {
 			case 'no-radio-menu':
 				break;
 			default:
-				$position = 'relative';
+				$position = 'absolute';
 				break;
 		}
 		$css = '';
@@ -345,16 +372,26 @@ class Whoopee_Customize {
 		$css .= 'top:0;';
 		$css .= 'left:0;';
 		$css .= 'right:0;';
-		$css .= 'box-shadow:0 .1rem .3rem .1rem #aaa;';
+		$css .= 'box-shadow:0 .01rem .3rem .1rem #aaa;';
 		$css .= '}';
+		
 		return $css;
 	}
 	
 	// LayoutのヘッダーコンテンツのCSS取得
-	public function get_layout_color_css() {
+	public function get_layout_header_color_css() {
+		$hex = get_theme_mod( 's-whoopee-header-color' );
+		
+		$css .= '.p-header-area1{';
+		$css .= 'background-color:' . $hex . ';';
+		$css .= '}';
+		return $css;
+	}
+	// LayoutのフッターコンテンツのCSS取得
+	public function get_layout_footer_color_css() {
 		// レイアウト
 		
-		$hex = get_theme_mod( 's-whoopee-auto-color' );
+		$hex = get_theme_mod( 's-whoopee-footer-color' );
 		$rgb = self::hex_to_rgb( $hex );
 		
 		$max = max( $rgb );

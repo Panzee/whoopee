@@ -21,6 +21,12 @@
 	&.c-row--between {
 		justify-content: space-between;
 	}
+	
+	&.c-row--margin {
+		> .c-row__col {
+	  	padding: $padding-size-xs;
+	  }
+	}
 
 	&.c-row--reverse {
 		flex-direction: row-reverse;
@@ -38,6 +44,7 @@
 
 	&__col {
 		flex: 1;
+		max-width: 100%;
 		
 		&--1-1 {
 			flex: 0 1 100%;

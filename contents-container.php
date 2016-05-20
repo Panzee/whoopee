@@ -2,8 +2,6 @@
 <div id="contents">
 	<div class="c-container">
 		<?php
-			global $template;
-			echo $template;
 			if ( is_front_page() && is_home() ) {
 				get_template_part( 'contents', 'archive' );
 			} elseif ( is_front_page() ) {

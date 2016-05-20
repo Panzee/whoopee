@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	color: #333;
+	color: $color-text;
 	font-family: 'Meiryo UI', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', Roboto, sans-serif;
 	font-size: 1.6rem;
 	line-height: 1.8;
@@ -24,6 +24,12 @@ body {
 
 code, kbd, pre, samp {
 	font-family: monospace;
+}
+
+pre {
+	overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 img {
@@ -44,30 +50,30 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 3.2rem;
-	line-height: 1;
+	line-height: 1.1;
 }
 
 h2 {
 	font-size: 2.8rem;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 h3 {
 	font-size: 2.4rem;
-	line-height: 1;
+	line-height: 1.3;
 }
 
 h4 {
 	font-size: 2.2rem;
-	line-height: 1;
+	line-height: 1.4;
 }
 
 h5 {
 	font-size: 2rem;
-	line-height: 1;
+	line-height: 1.5;
 }
 
 h6 {
 	font-size: 1.8rem;
-	line-height: 1;
+	line-height: 1.6;
 }

@@ -42,7 +42,7 @@
 			</div><!-- p-hamburger-nav -->
 		</div><!-- c-container -->
 	</div><!-- p-header-area1 -->
-	<div class="p-header-area2">
+	<div class="p-header-area2 is-fixed-next-area">
 		<div class="c-container">
 			<p class="p-header__description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- c-container -->

@@ -1,3 +1,34 @@
+.p-widget {
+	border: .1rem solid #cccccc;
+	padding: $padding-size-xs;
+	margin-bottom: $margin-size-sm;
+	background-color: #eee;
+	
+	&__title {
+		font-size: $font-size-heading-sm;
+		margin-top: 0;
+		margin-bottom: $margin-size-sm;
+		text-align: center;
+	}
+}
+
+// 検索
+.widget_search {
+	
+	form {
+		position: relative;
+		
+		[type=search] {
+			width: 100%;
+		}
+		[type=submit] {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+
 // RSS
 .widget_rss {
 

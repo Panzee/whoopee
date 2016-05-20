@@ -431,6 +431,12 @@ code, kbd, pre, samp {
   font-family: monospace;
 }
 
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -449,32 +455,32 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3.2rem;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 h2 {
   font-size: 2.8rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h3 {
   font-size: 2.4rem;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 h4 {
   font-size: 2.2rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 h5 {
   font-size: 2rem;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 h6 {
   font-size: 1.8rem;
-  line-height: 1;
+  line-height: 1.6;
 }
 
 #header {
@@ -523,7 +529,7 @@ h6 {
 
 .p-header-area2 {
   padding: 0.8rem;
-  background-color: #aaa;
+  background-color: #fff;
 }
 
 .c-media {
@@ -587,6 +593,10 @@ h6 {
           justify-content: space-between;
 }
 
+.c-row.c-row--margin > .c-row__col {
+  padding: 0.8rem;
+}
+
 .c-row.c-row--reverse {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
@@ -609,6 +619,7 @@ h6 {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  max-width: 100%;
 }
 
 .c-row__col--1-1 {
@@ -851,20 +862,12 @@ h6 {
   height: auto;
 }
 
-.p-footer .p-widget {
-  border: .1rem solid #cccccc;
+.p-footer__widget-area {
+  background-color: #aaa;
   padding: 0.8rem;
-  background-color: #eee;
 }
 
-.p-footer .p-widget .p-widget__title {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.p-footer .p-footer__copyright {
+.p-footer__copyright {
   font-size: 1.4rem;
   color: #eee;
   text-align: center;
@@ -872,14 +875,14 @@ h6 {
   margin-bottom: 1.6rem;
 }
 
-.p-footer .p-footer__powerd-by {
+.p-footer__powerd-by {
   margin-bottom: 0;
   font-size: 1.2rem;
   color: #eee;
   text-align: right;
 }
 
-.p-footer .p-footer__powerd-by > a {
+.p-footer__powerd-by > a {
   color: #eee;
   text-decoration: none;
 }
@@ -1048,19 +1051,6 @@ h6 {
   text-decoration: none;
 }
 
-.p-sidebar .p-widget {
-  border: .1rem solid #cccccc;
-  background-color: #eee;
-  padding: 0.8rem;
-  margin-bottom: 1.6rem;
-}
-
-.p-sidebar .p-widget__title {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 1.6rem;
-}
-
 .p-single__title {
   font-size: 3.2rem;
   margin-top: 0;
@@ -1140,6 +1130,34 @@ h6 {
 .p-site-brand__link {
   text-decoration: none;
   color: #333;
+}
+
+.p-widget {
+  border: .1rem solid #cccccc;
+  padding: 0.8rem;
+  margin-bottom: 1.6rem;
+  background-color: #eee;
+}
+
+.p-widget__title {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.widget_search form {
+  position: relative;
+}
+
+.widget_search form [type=search] {
+  width: 100%;
+}
+
+.widget_search form [type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .widget_rss ul {

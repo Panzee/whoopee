@@ -9,23 +9,37 @@
 	wp.customize( 's-whoopee-layout-header', function( value ) {
        value.bind( function( newval ) {
            // なんかする（newval 変数が新しい設定値を持っています)
-    	   style = get_layout_header_css( newval );
+    	   height = $('.p-header-area1').outerHeight();
+    	   style = get_layout_header_css( newval, height );
     	   $( 'head' ).append( style );
        } );
 	} );
-	wp.customize( 's-whoopee-auto-color', function( value ) {
+	wp.customize( 's-whoopee-header-color', function( value ) {
        value.bind( function( newval ) {
-    	   style = get_layout_color_css( newval );
+    	   style = get_layout_header_color_css( newval );
+    	   $( 'head' ).append( style );
+       } );
+	} );
+	wp.customize( 's-whoopee-footer-color', function( value ) {
+       value.bind( function( newval ) {
+    	   style = get_layout_foooter_color_css( newval );
     	   $( 'head' ).append( style );
        } );
 	} );
 } )( jQuery );
 
-function get_layout_color_css( newval ) {
+function get_layout_header_color_css( newval ) {
+	style = '<style>';
+	style += '.p-header-area1{background-color:' + newval + ';}';
+	style += '</style>';
+	
+	return style;
+}
+function get_layout_foooter_color_css( newval ) {
 	style = '<style>';
 	style += '#footer{background-color:' + newval + ';}';
-	
 	style += '</style>';
+	
 	return style;
 }
 function get_layout_main_css( newval ) {
@@ -78,12 +92,13 @@ function get_layout_main_css( newval ) {
 	return style;
 }
 
-function get_layout_header_css( newval ) {
+function get_layout_header_css( newval, height ) {
 	
 	style = '<style>';
 	switch ( newval ) {
 		case 'default':
-			position = 'relative';
+			position = 'absolute';
+			height = '0';
 			break;
 		case 'hedaer-fixed':
 			position = 'fixed';
@@ -91,7 +106,7 @@ function get_layout_header_css( newval ) {
 		case 'no-radio-menu':
 			break;
 		default:
-			position = 'relative';
+			position = 'absolute';
 			break;
 	}
 	style += '.is-site-header{';
