@@ -5,8 +5,19 @@
 			<div class="c-row__col c-row__col--1-1 is-main-row">
 				<main id="main">
 					<section class="p-archive">
-						<h1><?php _e( 'Not Found', 'whoopee' ); ?></h1>
-						<p><?php _e( 'Sorry. Page does not exist.', 'whoopee' ); ?></p>
+					<?php
+						if ( have_posts() ) :
+							while ( have_posts() ) :
+								the_post();
+					?>
+								<article <?php post_class( 'p-archive__entry' ); ?>>
+									<?php get_template_part( 'archive', 'media' ); ?>
+								</article>
+					<?php
+							endwhile;
+						endif;
+					?>
+					<?php get_template_part( 'pager' ); ?>
 					</section>
 				</main>
 			</div><!-- c-row__col -->

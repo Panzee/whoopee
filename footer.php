@@ -24,7 +24,7 @@
 			<?php endif; ?>
 		</div><!-- _c-row -->
 		<p class="p-footer__copyright">Copyright&copy; <?php bloginfo( 'name' ); ?> <?php echo date( 'Y' ); ?> All Rights Reserved.</p></p>
-		<p class="p-footer__powerd-by">Template by <a href="#">whoopee</a></p>
+		<p class="p-footer__powerd-by">Template by <a href="//wordpress.org/themes/whoopee/">whoopee</a></p>
 	</div><!-- c-container -->
 	<?php wp_footer(); ?>
 </footer>

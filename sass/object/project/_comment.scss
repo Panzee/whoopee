@@ -1,8 +1,44 @@
+.p-comments {
+	background-color: #ccc;
+	padding: $padding-size-xs;
+	margin-bottom: $margin-size-sm;
+}
+
 // コメントのタイトル
 #comments {
 	margin-top: 0;
 	margin-bottom: $margin-size-sm;
 	font-size: $font-size-heading-lg;
+}
+
+// コメントページャー
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: $margin-size-sm;
+	
+	.alignleft {
+		> a {
+			display: inline-block;
+			text-decoration: none;
+			color: #333;
+	    background-color: #fff;
+	    border: .1rem solid #ccc;
+	    padding: $padding-size-xs $padding-size-sm;
+	    cursor: pointer;
+		}
+	}
+	.alignright {
+		> a {
+			display: inline-block;
+			text-decoration: none;
+			color: #333;
+	    background-color: #fff;
+	    border: .1rem solid #ccc;
+	    padding: $padding-size-xs $padding-size-sm;
+	    cursor: pointer;
+		}
+	}
 }
 
 // コメントの一覧
@@ -15,6 +51,10 @@
 		padding: $padding-size-xs;
 		margin-bottom: $margin-size-sm;
 		border: .1rem solid #cccccc;
+		
+		&.bypostauthor {
+			background-color: #eee;
+		}
 	}
 	.comment-metadata {
 		font-size: 1.4rem;

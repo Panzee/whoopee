@@ -6,31 +6,36 @@
 		
 		> a {
 			background-color: #fff;
-	    border: .1rem solid #cccccc;
+	    border: .1rem solid #ccc;
 	    color: $color-text;
 	    cursor: pointer;
 	    display: inline-block;
-	    padding: $padding-size-xs $padding-size-lg;
+	    padding: $padding-size-xs $padding-size-md;
 	    text-align: center;
 	    text-decoration: none;
 		}
 	}
 	
 	&__paginate {
+		display: none;
+		
+		@media (min-width: $breakpoint-md-to-lg) {
+			display: block;
+		}
 		
 		.page-numbers {
 			background-color: #fff;
-	    border: .1rem solid #cccccc;
+	    border: .1rem solid #ccc;
 	    color: $color-text;
 	    cursor: pointer;
 	    display: inline-block;
-	    padding: $padding-size-xs $padding-size-lg;
+	    padding: $padding-size-xs $padding-size-md;
 	    text-align: center;
 	    text-decoration: none;
 			
 			&.current {
 				cursor: default;
-				background-color: blue;
+				// background-color: #00f;
 				color: #fff;
 				font-weight: bold;
 			}		
@@ -44,11 +49,11 @@
 		
 		> a {
 			background-color: #fff;
-	    border: .1rem solid #cccccc;
+	    border: .1rem solid #ccc;
 	    color: $color-text;
 	    cursor: pointer;
 	    display: inline-block;
-	    padding: $padding-size-xs $padding-size-lg;
+	    padding: $padding-size-xs $padding-size-md;
 	    text-align: center;
 	    text-decoration: none;
 		}
@@ -60,23 +65,26 @@
 	
 	> a {
 		background-color: #fff;
-	  border: .1rem solid #cccccc;
+	  border: .1rem solid #ccc;
 	  color: $color-text;
 	  cursor: pointer;
 	  display: inline-block;
-	 	padding: $padding-size-xs $padding-size-lg;
+	 	padding: $padding-size-xxs $padding-size-md;
 	  text-align: center;
 	  text-decoration: none;
 	}
 	
 	> span {
-		background-color: #00f;
-	  border: .1rem solid #cccccc;
-	  color: #fff;
-	  font-weight: bold;
-	  display: inline-block;
-	  padding: $padding-size-xs $padding-size-lg;
-	  text-align: center;
-	  text-decoration: none;
+		
+		&.page-link {
+			//background-color: #00f;
+		  border: .1rem solid #cccccc;
+		  color: #fff;
+		  font-weight: bold;
+		  display: inline-block;
+		  padding: $padding-size-xxs $padding-size-md;
+		  text-align: center;
+		  text-decoration: none;
+		}
 	}
 }

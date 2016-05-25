@@ -1,1 +1,1 @@
-<?php get_template_part( 'contents', 'container' ); ?>
+<?php get_template_part( 'home' );

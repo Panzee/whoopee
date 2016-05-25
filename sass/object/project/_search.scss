@@ -1,0 +1,19 @@
+.p-search {
+	&__count {
+		color: #666;
+		font-size: 1.4rem;
+	}
+	
+	form {
+		position: relative;
+		
+		[type=search] {
+			width: 100%;
+		}
+		[type=submit] {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}

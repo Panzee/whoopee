@@ -1,25 +1,36 @@
 <?php get_header(); ?>
 <div id="contents">
 	<div class="_c-container">
-		<div class="_c-row _c-row--margin">
-			<div class="_c-row__col _c-row__col--1-1 _c-row__col--md-2-3">
-				<main id="main" class="p-search">
-					<h2>「<?php echo esc_html( $s ); ?>」の検索結果 ：<?php echo $wp_query->found_posts; ?> 件 </h2>
-					<?php
-						if ( have_posts() ) :
-							while ( have_posts() ) :
-								the_post();
-								get_template_part( 'archive', 'media' );
+		<div class="c-row is-contents-layout">
+			<div class="c-row__col c-row__col--1-1 is-main-row">
+				<main id="main">
+					<section class="p-archive p-search">
+						<?php get_search_form(); ?>
+						<p class="p-search__count"><?php _e( 'Result', 'whoopee' ) ?>:<?php echo $wp_query->found_posts; ?> <?php _e( 'hit', 'whoopee' ); ?></p>
+						<?php
+							if ( have_posts() ) :
+								while ( have_posts() ) :
+									the_post();
+						?>
+									<article <?php post_class( 'p-archive__entry' ); ?>>
+										<?php get_template_part( 'archive', 'media' ); ?>
+									</article>
+						<?php		
 							endwhile;
+						else :
+						?>
+							<p><?php _e( 'Sorry. Page does not exist.', 'whoopee' ); ?></p>
+						<?php
 						endif;
-					?>
-					<?php get_template_part( 'pager' ); ?>
+						?>
+						<?php get_template_part( 'pager' ); ?>
+					</section>	
 				</main>
-			</div><!-- _c-row__col -->
-			<div class="_c-row__col _c-row__col--1-1 _c-row__col--md-1-3">
+			</div><!-- c-row__col -->
+			<div class="c-row__col c-row__col--1-1 is-side-row">
 				<?php get_sidebar(); ?>
-			</div><!-- _c-row__col -->
-		</div><!-- _c-row -->
-	</div><!-- _c-container -->
+			</div><!-- c-row__col -->
+		</div><!-- c-row -->
+	</div><!-- c-container -->
 </div><!-- contents -->
 <?php get_footer(); ?>

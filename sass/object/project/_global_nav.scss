@@ -13,19 +13,15 @@
 	    margin: 0;
 	    padding: 0;
 	    flex: 0 1 auto;
-	    //border-top: .1rem solid #cccccc;
-	    //border-left: .1rem solid #cccccc;
-	    //border-bottom: .1rem solid #cccccc;
+	    padding: 0 $padding-size-xxs;
 	    text-align: center;
-    
-    	&:last-child {
-    		//border-right: .1rem solid #cccccc;
-    	}
     	
     	> a {
 		    display: block;
 		    text-decoration: none;
 		    padding: $padding-size-xs $padding-size-sm;
+		    background-color: #fff;
+		    border: #ccc solid .1rem;
 		    color: $color-text;
 	    }
     }

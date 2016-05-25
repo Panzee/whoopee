@@ -1,14 +1,16 @@
 .p-archive {
 
+	margin-bottom: $margin-size-sm;
+
 	&__title {
 		font-size: $font-size-heading-lgx2;
 		margin-bottom: $margin-size-sm;
 	}
 	
 	&__description {
-		border: .1rem solid #cccccc;
 		background-color: #fff;
-		padding: $padding-size-xs;
+		border: .1rem solid #ccc;
+		padding: $padding-size-sm;
 		margin-bottom: $margin-size-lg;
 		
 		p:last-child {
@@ -19,7 +21,11 @@
 	&__entry {
 		margin-bottom: $margin-size-lg;
 		padding-bottom: $padding-size-md;
-		border: .1rem solid #cccccc;
 		background-color: #fff;
+		border: .1rem solid #ccc;
+		
+		&.sticky {
+			background-color: #eee;
+		}
 	}
 }

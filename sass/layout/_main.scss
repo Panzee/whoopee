@@ -1,21 +1,3 @@
 #main {
-	background-color: pink;
-	padding: 1.6rem;
-	
-	&.p-single {
-	
-		.single-meta {
-			.single-update {
-				text-align: right;
-				font-weight: bold;
-			}
-			.single-tags {
-				text-align: right;
-			}
-		}
-		.single-pager {
-			padding-top: $padding-size-sm;
-			padding-bottom: $padding-size-sm;
-		}
-	}
+	padding: $padding-size-sm;
 }
