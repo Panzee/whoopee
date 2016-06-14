@@ -2,7 +2,7 @@
 <div id="contents">
 	<div class="c-container">
 		<div class="c-row is-contents-layout">
-			<div class="c-row__col c-row__col--1-1 is-main-row">
+			<div class="c-row__col c-row__col--1-1 c-row__col--md-3-4">
 				<main id="main">
 					<section class="p-archive">
 					<?php
@@ -21,7 +21,7 @@
 					</section>
 				</main>
 			</div><!-- c-row__col -->
-			<div class="c-row__col c-row__col--1-1 is-side-row">
+			<div class="c-row__col c-row__col--1-1 c-row__col--md-1-4">
 				<?php get_sidebar(); ?>
 			</div><!-- c-row__col -->
 		</div><!-- c-row -->

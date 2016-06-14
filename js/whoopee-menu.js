@@ -1,10 +1,12 @@
 ( function( $ ) {
+
+	// open or close hamburger menu
 	$( '.is-click-hamburger' ).click( function() {
 		$( '.p-hamburger-nav' ).toggleClass( 'u-visible' );
 	} );
 	
-	$( window ).on( 'load resize', function() {
-		height = $( '.p-header-area1' ).outerHeight();
-		$( '.p-header-area2' ).css( 'margin-top', height + 'px' );
-	} );
+	// header height fixed
+	var height = jQuery( '.p-header-area1' ).outerHeight();
+	jQuery( '#header' ).css( 'padding-top', height + 'px' );
+
 } )( jQuery );

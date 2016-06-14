@@ -5,11 +5,16 @@
 	&__title {
 		font-size: $font-size-heading-lgx2;
 		margin-bottom: $margin-size-sm;
+		
+		padding: $padding-size-sm;
+    border-top: .2rem solid blue;
+    background-color: #eee;
 	}
 	
 	&__description {
 		background-color: #fff;
 		border: .1rem solid #ccc;
+		border-radius: .8rem;
 		padding: $padding-size-sm;
 		margin-bottom: $margin-size-lg;
 		
@@ -22,7 +27,6 @@
 		margin-bottom: $margin-size-lg;
 		padding-bottom: $padding-size-md;
 		background-color: #fff;
-		border: .1rem solid #ccc;
 		
 		&.sticky {
 			background-color: #eee;

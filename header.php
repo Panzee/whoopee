@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" >
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<!--[if lt IE 9]>
@@ -11,7 +11,7 @@
 </head>
 <body <?php body_class(); ?>>
 <header id="header" class="p-header">
-	<div class="p-header-area1 is-site-header">
+	<div class="p-header-area1">
 		<div class="c-container">
 			<div class="c-row c-row--nowrap c-row--auto c-row--between c-row--margin">
 				<div class="c-row__col">	
@@ -43,14 +43,16 @@
 			</div><!-- p-hamburger-nav -->
 		</div><!-- c-container -->
 	</div><!-- p-header-area1 -->
-	<div class="p-header-area2 is-fixed-next-area">
+	<!--<div class="p-header-area2">
 		<div class="c-container">
 			<p class="p-header__description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- c-container -->
+		</div>--><!-- c-container -->
 	</div><!-- p-header-area2 -->
 	<div class="p-header-area3">
 		<div class="c-container">
+			<?php if ( get_header_image() ) : ?>
 			<div class="p-header__image"><img src="<?php header_image(); ?>"></div>
+			<?php endif; ?>
 		</div><!-- c-container -->
 	</div><!-- p-header-area3 -->
 </header>

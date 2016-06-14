@@ -2,7 +2,7 @@
 <div id="contents">
 	<div class="_c-container">
 		<div class="c-row is-contents-layout">
-			<div class="c-row__col c-row__col--1-1 is-main-row">
+			<div class="c-row__col c-row__col--1-1 c-row__col--md-2-3">
 				<main id="main">
 					<section class="p-archive p-search">
 						<?php get_search_form(); ?>
@@ -27,7 +27,7 @@
 					</section>	
 				</main>
 			</div><!-- c-row__col -->
-			<div class="c-row__col c-row__col--1-1 is-side-row">
+			<div class="c-row__col c-row__col--1-1 c-row__col--md-1-3">
 				<?php get_sidebar(); ?>
 			</div><!-- c-row__col -->
 		</div><!-- c-row -->

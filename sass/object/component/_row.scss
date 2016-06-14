@@ -57,6 +57,18 @@
 				max-width: 33.33333%;
 			}
 		}
+		&--md-3-4 {
+			@media (min-width: $breakpoint-md-to-lg) {
+				flex: 0 1 75%;
+				max-width: 75%;
+			}
+		}
+		&--md-1-4 {
+			@media (min-width: $breakpoint-md-to-lg) {
+				flex: 0 1 25%;
+				max-width: 25%;
+			}
+		}
 	
 		&.c-row_col--sm-1-1 {
 			@media screen and (max-width: $breakpoint-md-to-lg) {

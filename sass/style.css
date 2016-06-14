@@ -488,8 +488,13 @@ h6 {
   line-height: 1.6;
 }
 
+#header {
+  background-color: #fff;
+}
+
 #contents {
   padding-top: 1.6rem;
+  background-color: #fff;
 }
 
 #main {
@@ -503,10 +508,17 @@ h6 {
 #footer {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
+  background-color: #999;
 }
 
 .p-header-area1 {
   padding: 0.8rem;
+  box-shadow: 0 .1rem .2rem #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 }
 
 .p-header-area2 {
@@ -621,6 +633,24 @@ h6 {
   }
 }
 
+@media (min-width: 64em) {
+  .c-row__col--md-3-4 {
+    -webkit-flex: 0 1 75%;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 64em) {
+  .c-row__col--md-1-4 {
+    -webkit-flex: 0 1 25%;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+    max-width: 25%;
+  }
+}
+
 @media screen and (max-width: 64em) {
   .c-row__col.c-row_col--sm-1-1 {
     -webkit-flex: 0 1 100%;
@@ -673,11 +703,15 @@ h6 {
 .p-archive__title {
   font-size: 3.2rem;
   margin-bottom: 1.6rem;
+  padding: 1.6rem;
+  border-top: .2rem solid blue;
+  background-color: #eee;
 }
 
 .p-archive__description {
   background-color: #fff;
   border: .1rem solid #ccc;
+  border-radius: .8rem;
   padding: 1.6rem;
   margin-bottom: 3.6rem;
 }
@@ -690,7 +724,6 @@ h6 {
   margin-bottom: 3.6rem;
   padding-bottom: 2.4rem;
   background-color: #fff;
-  border: .1rem solid #ccc;
 }
 
 .p-archive__entry.sticky {
@@ -698,7 +731,7 @@ h6 {
 }
 
 .p-comments {
-  background-color: #ccc;
+  background-color: #eee;
   padding: 0.8rem;
   margin-bottom: 1.6rem;
 }
@@ -749,10 +782,6 @@ h6 {
   padding: 0.8rem;
   margin-bottom: 1.6rem;
   border: .1rem solid #cccccc;
-}
-
-.commentlist .comment.bypostauthor {
-  background-color: #eee;
 }
 
 .commentlist .comment-metadata {
@@ -948,7 +977,6 @@ h6 {
   text-decoration: none;
   padding: 0.8rem 1.6rem;
   background-color: #fff;
-  border: #ccc solid .1rem;
   color: #333;
 }
 
@@ -957,7 +985,6 @@ h6 {
   display: inline-block;
   color: #333;
   background-color: #fff;
-  border: .1rem solid #ccc;
   padding: 0.4rem 0.8rem 0 0.8rem;
   cursor: pointer;
 }
@@ -1049,6 +1076,7 @@ h6 {
 
 .p-pager__paginate .page-numbers.current {
   cursor: default;
+  background-color: #999;
   color: #fff;
   font-weight: bold;
 }
@@ -1084,6 +1112,7 @@ h6 {
 }
 
 .page-links > span.page-link {
+  background-color: #999;
   border: .1rem solid #cccccc;
   color: #fff;
   font-weight: bold;
@@ -1116,7 +1145,6 @@ h6 {
   padding: 1.6rem;
   margin-bottom: 1.6rem;
   background-color: #fff;
-  border: #ccc solid .1rem;
   overflow: auto;
 }
 
@@ -1311,7 +1339,6 @@ h6 {
   padding: 0.8rem;
   margin-bottom: 1.6rem;
   background-color: #fff;
-  border: #ccc solid .1rem;
   overflow: hidden;
 }
 
@@ -1319,6 +1346,7 @@ h6 {
   font-size: 2rem;
   margin-top: 0;
   margin-bottom: 1.6rem;
+  padding: 0.8rem;
   text-align: center;
 }
 

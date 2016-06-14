@@ -2,13 +2,13 @@
 	padding: $padding-size-xs;
 	margin-bottom: $margin-size-sm;
 	background-color: #fff;
-	border: #ccc solid .1rem;
 	overflow: hidden;
 	
 	&__title {
 		font-size: $font-size-heading-sm;
 		margin-top: 0;
 		margin-bottom: $margin-size-sm;
+		padding: $padding-size-xs;
 		text-align: center;
 	}
 }
